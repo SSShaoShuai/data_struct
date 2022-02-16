@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "DataStruct",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "DataStruct::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DataStruct-Debug-e5461642433a7af3d3b3.json",
+					"name" : "DataStruct",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "DoubleLinkedList::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-DoubleLinkedList-Debug-56a6557328e59d46acfe.json",
+					"name" : "DoubleLinkedList",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LinearTable::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LinearTable-Debug-1b675485ae2571790a74.json",
+					"name" : "LinearTable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SingleLinkedList::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SingleLinkedList-Debug-84d517d2de7c95c13d38.json",
+					"name" : "SingleLinkedList",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/Program/c/DataStruct/DataStruct/cmake-build-debug",
+		"source" : "E:/Program/c/DataStruct/DataStruct"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
