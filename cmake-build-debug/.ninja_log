@@ -1,9 +1,5 @@
 # ninja log v5
-15	219	6667183759531817	CMakeFiles/DataStruct.dir/main.c.obj	c980a11c53e424
-1	250	6667183759850975	CMakeFiles/DataStruct.dir/LinearTable/main.c.obj	7465641778bd923b
-5	287	6667185072385106	CMakeFiles/LinearTable.dir/LinearTable/main.c.obj	597786cae0c8861
 288	522	6667185074674091	LinearTable.exe	7c3d1e85aaceb14d
-0	188	6667203290091009	CMakeFiles/SingleLinkedList.dir/LinkedList/SingleLinkedList/main.c.obj	c70c1122132634f4
-193	461	6667203292833155	SingleLinkedList.exe	da83145b2f0d30ee
-4	230	6667203893167020	CMakeFiles/SingleLinkedList.dir/LinkedList/SingleLinkedList/main.c.obj	c70c1122132634f4
 246	530	6667203896109152	SingleLinkedList.exe	da83145b2f0d30ee
+0	152	1647235051827807447	CMakeFiles/DataStruct.dir/main.c.o	f0234189597c4643
+152	195	1647235051871478962	DataStruct	2cecd950d6b593da
