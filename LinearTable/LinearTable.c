@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <malloc/malloc.h>
 #include <stdbool.h>
 #include <stdlib.h>
 
@@ -8,11 +8,11 @@
 typedef int ElemType;
 typedef int status;
 
-typedef struct {
+typedef struct{
     ElemType* elem;
     int length;//线性表当前长度
     int listsize;//线性表当前最大长度
-}SqList;
+} SqList;
 
 //初始化线性表
 bool InitList(SqList* L) {

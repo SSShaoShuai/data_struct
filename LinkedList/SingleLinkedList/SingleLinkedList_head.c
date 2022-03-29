@@ -7,7 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
+#include <malloc/malloc.h>
 #include <stdbool.h>
 
 typedef int ElemType;

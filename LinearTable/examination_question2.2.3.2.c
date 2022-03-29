@@ -1,13 +1,18 @@
 //
 // Created by 47244 on 2022/2/17.
 //
+#ifndef _TEST_H_
+#define _TEST_H_
+
+
+#include "LinearTable.c"
+
+#endif
 
 
 typedef int DataType;
 
 void reverse_data(DataType *pInt, int i, int i1, int size);
-
-#include "LinearTable.c"
 
 
 /*
@@ -134,7 +139,7 @@ bool del_s_t(SqList *L,ElemType s,ElemType t){
  *@author: NSS
  *@date:2022/2/17
  **/
-bool Del_s_t2(SqList *L,ElemType s,ElemType t){
+bool Del_s_tt(SqList *L,ElemType s,ElemType t){
     int i,k=0;
     if(L->length==0 ||s>=t) return false;
     for(i=0;i<L->length;i++){

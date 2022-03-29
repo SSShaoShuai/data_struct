@@ -4,7 +4,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
+#include <malloc/malloc.h>
 #include <stdbool.h>
 
 typedef int ElemType;
@@ -110,75 +110,4 @@ Node  *GetElem_NoHead(LinkListHead L,int i){
         j++;
     }
     return P;
-}
-
-//按值查找元素
-Node *LocalElem_NoHead(LinkListHead L,ElemType e){
-    Node *p=L;
-    while (p!=NULL && p->data!=e)
-        p=p->next;
-    return p;
-}
-
-//插入元素
-bool ListInsert_NoHead(LinkListHead *L,int i,ElemType e){
-    if(i<1 || i>GetLength_NLinkList(L)){
-        return false;
-    }
-    Node *p,*s;//s为新节点
-    int j=1;
-    s=(Node *) malloc(sizeof (Node));
-    s->next=NULL;
-    s->data=e;
-    p=L;
-    if(i==1){
-        s->next=L;
-        L=s;
-        return true;
-    }
-    while (p!=NULL &&j<i-1){//找到第i-1个节点
-        p=p->next;
-        j++;
-    }
-    if(p==NULL){
-        return false;
-    }
-    s->next=p->next;
-    p->next=s;
-    return true;
-}
-
-//按位序删除-不带头结点
-/*
- * 第一位特殊处理：将L赋值给p，将链表的指针指向原第二个结点，释放p，及实现删除第一个结点
- * 后续删除思想：找到第i-1位的结点，将该节点的后继指向第i位的后继，释放第i位的空间即实现删除操作
- * */
-bool ListDel_NoHead(LinkListHead *L,int i,ElemType *e){
-    if(i<1 ){
-        return false;
-    }
-    Node *p;
-    if(i==1){//删除第一位，特殊处理
-        p=*L;
-        *L= (*L)->next;
-        free(p);
-        return true;
-    }
-    int j=0;
-    p=L;
-    while (p!=NULL && j<i-1){//找到位序为i的前置节点，将前置节点的后继指向i结点的后继
-        p=p->next;
-        j++;
-    }//循环结束已找到第i-1个结点
-    if(p==NULL){//p值为空则第i个结点无数据
-        return false;//i值不合法
-    }
-    if(p->next==NULL){
-        return false;//第i-1个值后已无其他节点
-    }
-    Node *q=p->next;//q指向要删除的结点
-    e=q->data;//将删除的值赋给e
-    p->next=q->next;//将p的后继设为q的后继，即实现删除操作
-    free(q);//释放q结点的空间
-    return true;
 }

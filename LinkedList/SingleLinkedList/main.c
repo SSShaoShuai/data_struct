@@ -1,8 +1,14 @@
 //
 // Created by 47244 on 2022/1/22.
 //
+#ifndef _TEST_H_
+#define _TEST_H_
+
 #include "SingleLinkedList.c"
 #include "SingleLinkedList_head.c"
+
+#endif
+
 typedef int ElemType;
 
 void LinkedList_noHead_operation(){

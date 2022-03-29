@@ -1,28 +1,32 @@
 //
 // Created by 47244 on 2022/2/16.
 //
+#ifndef _TEST_H_
+#define _TEST_H_
+
 #include "LinearTable.c"
 #include "examination_question2.2.3.2.c"
 
+#endif
 void main()
 {
     SqList list1;
-    printf("³õÊ¼»¯ÏßĞÔ±ílist1 start");
-    if (InitList(&list1)) printf("³õÊ¼»¯³É¹¦");
-    else printf("³õÊ¼»¯Ê§°Ü");
+    printf("åˆå§‹åŒ–çº¿æ€§è¡¨list1 start");
+    if (InitList(&list1)) printf("åˆå§‹åŒ–æˆåŠŸ");
+    else printf("åˆå§‹åŒ–å¤±è´¥");
 
     InPut(&list1, 5);
-    //for (int i = 0; i <= 20; i++) if(ListInstert(&list1, i, (int)(rand()%100+1))) printf("²åÈë³É¹¦\n");//²åÈëËæ»úÊı¾İ
-    for (int i = 0; i <= 20; i++) if(ListInstert(&list1, i, i)) printf("²åÈë³É¹¦\n");//²åÈëÓĞĞòÊı¾İ
+    //for (int i = 0; i <= 20; i++) if(ListInstert(&list1, i, (int)(rand()%100+1))) printf("æ’å…¥æˆåŠŸ\n");//æ’å…¥éšæœºæ•°æ®
+    for (int i = 0; i <= 20; i++) if(ListInstert(&list1, i, i)) printf("æ’å…¥æˆåŠŸ\n");//æ’å…¥æœ‰åºæ•°æ®
     ElemType update = 16;
     UpdateElem(&list1, 15,&update);
     ElemType s = 30;
     ElemType t = 50;
     Del_same(&list1);
-    printf("±í³¤£º%d", Length(&list1));
+    printf("è¡¨é•¿ï¼š%d", Length(&list1));
     OutPut(&list1);
-    //printf("¾­¹ıÉ¾³ıºóµÄÊı¾İÎª£º");
-    //Del_s_t2(&list1,s,t); //2.2.3 ÏßĞÔ±íÊÔÌâÓ¦ÓÃÌâ µÚËÄÌâ
-    //Del_s_t(&list1, s, t);//2.2.3 ÏßĞÔ±íÊÔÌâÓ¦ÓÃÌâ µÚÎåÌâ
+    //printf("ç»è¿‡åˆ é™¤åçš„æ•°æ®ä¸ºï¼š");
+    //Del_s_t2(&list1,s,t); //2.2.3 çº¿æ€§è¡¨è¯•é¢˜åº”ç”¨é¢˜ ç¬¬å››é¢˜
+    //Del_s_t(&list1, s, t);//2.2.3 çº¿æ€§è¡¨è¯•é¢˜åº”ç”¨é¢˜ ç¬¬äº”é¢˜
     //OutPut(&list1);
 }

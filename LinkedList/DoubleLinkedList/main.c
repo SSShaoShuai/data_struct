@@ -1,7 +1,11 @@
 //
 // Created by 47244 on 2022/2/15.
 //
+#ifndef _TEST_H_
+#define _TEST_H_
+
 #include "DoubleLinkedList.c"
+#endif
 
 void main(){
     printf("DoubleLinkedList --Start\n");
