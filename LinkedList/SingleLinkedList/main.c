@@ -11,6 +11,7 @@
 
 typedef int ElemType;
 
+/*
 void LinkedList_noHead_operation(){
     printf("\nLinkedList start\n");
     LinkListHead LH;
@@ -91,6 +92,7 @@ void LinkedList_noHead_operation(){
         }
     } while (choice!=-1);
 }
+*/
 
 
 void SingleLinkList_head_operation(){
@@ -187,7 +189,7 @@ void  main(){
                 SingleLinkList_head_operation();
                 break;
             case 1:
-                LinkedList_noHead_operation();
+//                LinkedList_noHead_operation();
                 break;
             default:
                 printf("输入错误，请重新输入\n");
