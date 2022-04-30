@@ -119,3 +119,6 @@ void Print_List(SLinkList L){
 void testSLinkList(){
 
 }
+int main(){
+    return 0;
+}

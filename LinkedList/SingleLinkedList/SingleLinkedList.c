@@ -14,6 +14,7 @@ typedef struct Node {
     struct Node *next;
 } Node, *LinkListHead;
 
+
 //初始化
 bool ListInit_Head(LinkListHead *L) {
     *L = NULL;
@@ -46,10 +47,27 @@ LinkListHead List_HeadInsert_NOHead(LinkListHead *L) {
 }
 
 //尾插法建立单链表--不带头结点
-LinkListHead List_TailInsert_NoHead(LinkListHead *L){
-    printf("开始尾插法建立单链表\n");
+LinkListHead *List_TailInsert_NoHead(LinkListHead *L){
+    int x;
+    L=(LinkListHead *) malloc(sizeof(Node));
+    Node *s,*r=L;
+    scanf("%d",&x);
+    while (x!=9999){
+        s=(Node *) malloc(sizeof (Node));
+        s->data=x;
+        r->next=s;
+        r=s;
+        scanf("%d",&x);
+    }
+
+    r->next=NULL;
+    return L;
+}
+/*LinkListHead List_TailInsert_NoHead(LinkListHead *L){
+    printf("\n开始尾插法建立单链表\n");
+    L=(LinkListHead) malloc(sizeof (Node));
     Node *s;//要插入的节点
-    Node *r;//尾结点
+    Node *r=L;//尾结点
     int x;
     scanf("%d",&x);
     while (x!=9999){
@@ -65,7 +83,8 @@ LinkListHead List_TailInsert_NoHead(LinkListHead *L){
         }
         scanf("%d",&x);
     }
-}
+    return L;
+}*/
 
 //求表长
 int GetLength_NLinkList(LinkListHead L){
@@ -86,11 +105,12 @@ bool List_HeadEmpty(LinkListHead L){
     }
 }
 //输出链表
-void PrintList_Head(LinkListHead L){
+void PrintList_Head(LinkListHead *L){
     printf("开始输出链表数据-不带头结点\n");//不带头结点的单链表L即为单链表第一位
-    while (L!=NULL){
-        printf("%d ",L->data);
-        L=L->next;
+    Node *node=L;
+    while (node!=NULL){
+        printf("\n%d",node->data);
+        node=node->next;
     }
     printf("\n输出链表结束\n");
 }

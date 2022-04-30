@@ -91,8 +91,8 @@ void LinkedList_noHead_operation(){
                 system("pause");
         }
     } while (choice!=-1);
-}
-*/
+}*/
+
 
 
 void SingleLinkList_head_operation(){
@@ -186,7 +186,7 @@ void  main(){
                 printf("感谢使用本系统，再见\n");
                 break;
             case 0:
-                SingleLinkList_head_operation();
+//                SingleLinkList_head_operation();
                 break;
             case 1:
 //                LinkedList_noHead_operation();
