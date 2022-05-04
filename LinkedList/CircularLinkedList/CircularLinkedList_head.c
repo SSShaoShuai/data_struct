@@ -144,7 +144,7 @@ LinkList List_TailInsert(LinkList *L){
 
 //头插法，带头节点
 LinkList List_HeadInsert(LinkList *L){
-    printf("%d","\n开始头插法建立循环单链表\n");
+    printf("\n开始头插法建立循环单链表\n");
     InitList(*L);
     int e;
     LNode *s,*r=L;   //r表示尾指针
@@ -159,6 +159,7 @@ LinkList List_HeadInsert(LinkList *L){
             r=s;//第一个插入的数据即为尾节点，将尾节点赋值给r之后将isFirst的值改为false
             isFirst=false;
         }
+        scanf("%d",&e);
     }
     r->next=L;  //因为是循环链表，所以将r的后继指针只想L
     return L;
